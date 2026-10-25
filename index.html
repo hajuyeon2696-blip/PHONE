@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>my little diary ♡</title>
+<style>
+  :root {
+    --bg: #fff4f7;
+    --card: #ffffff;
+    --accent: #e9a1bd;
+    --text: #755463;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 18px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont,
+      "Apple SD Gothic Neo", sans-serif;
+    text-align: center;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .top {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin: 15px 0 25px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid #f5dce6;
+    border-radius: 24px;
+    padding: 28px 20px;
+    box-shadow: 0 8px 25px #c994aa20;
+  }
+
+  .heart {
+    font-size: 42px;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 27px;
+    margin: 12px 0;
+  }
+
+  .intro {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .line {
+    border: 0;
+    border-top: 1px solid #f4e4eb;
+    margin: 22px 0;
+  }
+
+  button {
+    width: 100%;
+    border: 0;
+    border-radius: 14px;
+    padding: 14px;
+    margin-top: 10px;
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  button:active { transform: scale(.98); }
+
+  #note {
+    min-height: 24px;
+    font-size: 14px;
+    margin-top: 18px;
+    line-height: 1.7;
+  }
+
+  footer {
+    font-size: 11px;
+    margin-top: 25px;
+    opacity: .7;
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="top">♡ MY LITTLE WORLD ♡</p>
+
+    <section class="card">
+      <p class="heart">୨୧</p>
+      <h1>my little diary</h1>
+
+      <p class="intro">
+        나만의 작은 공간에 온 걸 환영해 ♡<br>
+        좋아하는 것들을 하나씩 모으는 중.
+      </p>
+
+      <hr class="line">
+
+      <p>오늘의 기분은 어때?</p>
+
+      <button onclick="showNote('오늘도 행복한 하루 보내기 ♡')">
+        ♡ 오늘의 메시지
+      </button>
+
+      <button onclick="showNote('좋아하는 것들로 가득 채우기 ୨୧')">
+        ✧ 나의 작은 공간
+      </button>
+
+      <p id="note">버튼을 눌러 봐!</p>
+    </section>
+
+    <footer>made with love ♡</footer>
+  </main>
+
+  <script>
+    function showNote(message) {
+      document.getElementById("note").textContent = message;
+    }
+  </script>
+</body>
+</html>
